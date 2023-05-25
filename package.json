@@ -1,0 +1,22 @@
+{
+  "name": "graphql",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon index.js"
+  },
+  "dependencies": {
+    "apollo-server": "^3.10.2",
+    "apollo-server-core": "^3.10.2",
+    "graphql": "^16.6.0",
+    "graphql-yoga": "^3.9.1",
+    "uuid": "^9.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
