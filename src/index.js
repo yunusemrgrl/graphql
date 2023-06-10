@@ -2,12 +2,14 @@ const { createYoga, createPubSub,createSchema, pipe, map, filter  } = require('g
 const { createServer } = require('node:http')
 const db = require('./data.json')
 
-const pubSub = createPubSub();
+const {makeExecutableSchema} = require('@graphql-tools/schema')
 
 const resolvers = require('./graphql/resolvers');
 
 
-const schema = createSchema({
+const pubSub = createPubSub();
+
+const executableSchema  = makeExecutableSchema({
   typeDefs: `
     type User {
         id: ID!
@@ -152,12 +154,18 @@ const schema = createSchema({
         participantCreated: Participant!
         eventCreated: Event!
      }
+    schema {
+        query: Query
+        mutation: Mutation
+        subscription: Subscription
+    }
+     
 `,
   resolvers
 })
 
 const yoga = createYoga({
-    schema,
+    schema:executableSchema,
     context: {
         db,
         pubSub

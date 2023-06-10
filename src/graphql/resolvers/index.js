@@ -10,5 +10,6 @@ module.exports = {
     Query,
     Mutation,
     Subscription,
-    Participant
+    Participant,
+    Event,
 }

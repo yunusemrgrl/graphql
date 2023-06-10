@@ -1,9 +1,9 @@
 const Event = {
-    user: (parent) => {
-        return users.find((user) => user.id == parent.user_id)
+    user: (parent,_,{db}) => {
+        return db.users.find((user) => user.id == parent.user_id)
     },
-    location: (parent) => {
-        return locations.find((location) => location.id == parent.location_id)
+    location: (parent,_,{db}) => {
+        return db.locations.find((location) => location.id == parent.location_id)
     }
 }
 
