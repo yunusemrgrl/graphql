@@ -12,4 +12,6 @@ module.exports = {
     Subscription,
     Participant,
     Event,
+    User,
+    Location
 }
