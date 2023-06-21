@@ -8,7 +8,7 @@ const Subscription = {
         subscribe: (_,__,{pubSub}) => pubSub.subscribe('participantCreated'),
         resolve: (payload) => payload.newParticipant
     },
-    updateParticipant: {
+    updatedParticipant: {
         subscribe: (payload, args,{pubSub}) =>{
             return pipe(
                 pubSub.subscribe('updateParticipant'),

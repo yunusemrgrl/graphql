@@ -139,7 +139,7 @@ deleteAllParticipant: DeleteAllOutput!
 
 type Subscription {
 userCreated: User!
-updateParticipant(event_id: ID): Participant!
+updatedParticipant(event_id: ID): Participant!
 participantCreated: Participant!
 eventCreated: Event!
 }
@@ -149,4 +149,4 @@ mutation: Mutation
 subscription: Subscription
 }`
 
-export default typeDefs;
+module.exports = typeDefs;
