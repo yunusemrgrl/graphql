@@ -20,4 +20,4 @@ const Query = {
     db.participants.find((participant) => participant.id == parseInt(args.id))
 }
 
-module.exports = Query;
+module.exports.Query = Query;

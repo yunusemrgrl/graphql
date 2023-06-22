@@ -10,7 +10,7 @@ const resolvers = require('./graphql/resolvers');
 const typeDefs = require('./graphql/types');
 
 // const typeDefs = importSchema(join(__dirname, './graphql/types/schema.graphql'))
-
+console.log(resolvers)
 const pubSub = createPubSub();
 
 const executableSchema  = makeExecutableSchema({

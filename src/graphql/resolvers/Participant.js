@@ -7,4 +7,4 @@ const Participant = {
     }
 }
 
-module.exports = Participant;
+module.exports.Participant = Participant;

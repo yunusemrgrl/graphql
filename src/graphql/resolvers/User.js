@@ -3,4 +3,4 @@ const User = {
     participants: (parent, _,{db}) => db.participants.filter((participant) => participant.user_id === parent.id),
 }
 
-module.exports = User;
+module.exports.User = User;
